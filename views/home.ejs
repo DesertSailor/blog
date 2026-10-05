@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<div class="container-cover">
+  
+<h1>Home</h1>
+
+<p><%= content %></p>
+</div>
+
+<div>
+    <ul>
+<% posts.forEach(function(post){ %>
+    <li>
+
+    <h2> <%= post.blogtitle %></h2>
+   
+    
+    <p>   <%= post.blogcontent.substring(0, 30) + '...'%> <a  href=  "post/<%=post._id%>" >Read More  </a></p>
+    </li>
+    <%  }) %>
+</ul>
+<button class="btn btn-success"><a href="/compose">compose</a></button>
+</div>
+<%- include('partials/footer') %>
