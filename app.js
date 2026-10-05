@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const lodash = require('lodash')
 
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 const homecontent = "This is the home page content. You can add more content here as needed. This content can be displayed on the home page of your application. feel free to customize it to suit your needs. You can also add more sections or features to the home page as required.";
